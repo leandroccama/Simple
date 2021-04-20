@@ -5,64 +5,119 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <title>Document</title>
 </head>
 <body>
   
-  <div class="columns is-mobile">
-    <div class="column is-narrow">
-      <div class="box">
-        <div class="field">
-          <label class="label is-small">Sede</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option value="0">CAMPUS MONTERRICO</option>
-              </select>
+  <div class="columns is-gapless is-mobile">
+    <div class="column is-narrow has-background-light" style="width: 400px;">
+      <div class="p-4">
+        <div class="block">
+          <span class="subtitle is-6 is-block">Mis reservas</span>
+          <p class="title is-2">CUBÍCULOS</p>
+          <p class="subtitle is-5">Recursos disponibles</p>
+        </div>
+
+        <div class="box block is-radiusless">
+          <div class="field">
+            <label class="label is-small">Sede</label>
+            <div class="control">
+              <div class="select is-fullwidth is-dark">
+                <select>
+                  <option value="0">CAMPUS MONTERRICO</option>
+                </select>
+              </div>
             </div>
+          </div>
+  
+          <div class="field">
+            <label class="label is-small">Pabellón</label>
+            <div class="control">
+              <div class="select is-fullwidth is-dark">
+                <select>
+                  <option value="0">SELECCIONE PABELLON</option>
+                </select>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field">
+            <label class="label is-small">Dia de reserva</label>
+            <div class="control">
+              <div class="select is-fullwidth is-dark">
+                <select>
+                  <option value="0">SELECCIONE PABELLON</option>
+                </select>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field">
+            <label class="label is-small">Hora de reserva</label>
+            <div class="control">
+              <div class="select is-fullwidth is-dark">
+                <select>
+                  <option value="0">16:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field">
+            <label class="label is-small">Cantidad de horas</label>
+            <div class="control">
+              <div class="select is-fullwidth is-dark">
+                <select>
+                  <option value="0">1</option>
+                  <option value="0">2</option>
+                  <option value="0">3</option>
+                  <option value="0">4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+  
+          <div class="field">
+            <button class="button is-black is-fullwidth">VER DISPONIBILIDAD</button>
           </div>
         </div>
 
-        <div class="field">
-          <label class="label is-small">Pabellón</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option value="0">SELECCIONE PABELLON</option>
-              </select>
-            </div>
-          </div>
-        </div>
+        <div class="block">
+          <p class="subtitle is-5 mb-3">Accesos Rápidos</p>
 
-        <div class="field">
-          <label class="label is-small">Dia de reserva</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option value="0">SELECCIONE PABELLON</option>
-              </select>
+          <div class="field">
+            <div class="control">
+              <div class="box is-radiusless px-2 py-3 mb-2">
+                <div class="icon-text">
+                  <span class="icon has-text-white has-background-link" style="border-radius: 50%;">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                  <span>Información de Contacto</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="field">
-          <label class="label is-small">Hora de reserva</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option value="0">16:00</option>
-              </select>
+            <div class="control">
+              <div class="box is-radiusless px-2 py-3 mb-2">
+                <div class="icon-text">
+                  <span class="icon has-text-white has-background-link" style="border-radius: 50%;">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                  <span>Descargar Reglamentos (pdf)</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="field">
-          <label class="label is-small">Cantidad de horas</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option value="0">Cantidad de horas</option>
-              </select>
+            <div class="control">
+              <div class="box is-radiusless px-2 py-3 mb-2">
+                <div class="icon-text">
+                  <span class="icon has-text-white has-background-link" style="border-radius: 50%;">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                  <span>Eliminar reserva</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
