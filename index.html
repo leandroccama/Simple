@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.css">
   <link rel="stylesheet" href="css/bulma-calendar.min.css">
+  <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <title>Document</title>
 </head>
@@ -102,7 +103,11 @@
             <div class="field">
               <div class="select" style="width: 100%;">
                 <select name="" id="" style="width: 100%;">
-                  <option value="">COMPUTADORAS-UPC</option>
+                  <option value="0">COMPUTADORAS-UPC</option>
+                  <option value="1">CUBICULOS UPC</option>
+                  <option value="2">COMPUTADORAS IMAC PAB.L</option>
+                  <option value="3">CUBICULOS PAB.L</option>
+                  <option value="4">DISEÑO - MAC</option>
                 </select>
               </div>
             </div>
@@ -118,7 +123,7 @@
           
           <div class="field-body">
             <div class="field">
-              <input type="date" name="" id="">
+              <input type="date" id="date" class="input" name="">
             </div>
           </div>
         </div>
@@ -151,12 +156,12 @@
       <div class="column">
         <div class="field is-horizontal">
           <div class="field-label is-normal">
-            <label class="label" style="width: 140px;">Fecha de reserva</label>
+            <label class="label" style="width: 140px;">Hora de reserva</label>
           </div>
           
           <div class="field-body">
             <div class="field">
-              <input type="time" name="" id="">
+              <input type="time" id="time" class="input" name="">
             </div>
           </div>
         </div>
@@ -173,7 +178,8 @@
     </div>
   </main>
 
-  <script src="js/bulma-calendar.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.datetimepicker.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
