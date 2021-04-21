@@ -1,16 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  $('#date').datetimepicker({
-    ownerDocument: document,
-    contentWindow: window,
-    timepicker: false,
-    value:'',
-    mask:false,
-
+  flatpickr('#date', {
+    onChange: (selectedDates, dateStr, instance) => {
+      console.log(dateStr);
+      console.log(selectedDates);
+      console.log(instance);
+    }
   });
 
-  $('#time').datetimepicker({
-    datepicker: false,
+  flatpickr('#time', {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+    onChange: (selectedDates, dateStr, instance) => {
+      console.log(dateStr);
+      console.log(selectedDates);
+      console.log(instance);
+    }
   });
-
 });

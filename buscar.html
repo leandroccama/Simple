@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.css">
-  <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="css/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <title>Document</title>
 </head>
@@ -30,155 +30,167 @@
     <p class="subtitle is-4">Busque y reserve los recursos según los criterios ingresados.</p>
     <hr>
 
-    <div class="columns is-mobile">
-      <div class="column">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 165px;">Modalidad de estudio</label>
+    <form name="form">
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 165px;">Modalidad de estudio</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="select is-fullwidth">
+                  <select name="">
+                    <option value="">AC-PREGRADO-UPC</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <div class="select" style="width: 100%;">
-                <select name="" id="" style="width: 100%;">
-                  <option value="">AC-PREGRADO-UPC</option>
-                </select>
+        </div>
+  
+        <div class="column is-narrow-mobile">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 140px;">Ciclo academico</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="select">
+                  <select style="width: 130px;">
+                    <option value="">202001</option>
+                    <option value="">202002</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="column is-narrow-mobile">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 140px;">Ciclo academico</label>
+  
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 165px;">Local</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="select is-fullwidth">
+                  <select name="">
+                    <option value="">Todos</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <div class="select">
-                <select style="width: 130px;">
-                  <option value="">202001</option>
-                  <option value="">202002</option>
-                </select>
+        </div>
+  
+        <div class="column is-hidden-mobile"></div>
+      </div>
+  
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 165px;">Tipo de recurso</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="select" style="width: 100%;">
+                  <select name="" id="" style="width: 100%;">
+                    <option value="0">COMPUTADORAS-UPC</option>
+                    <option value="1">CUBICULOS UPC</option>
+                    <option value="2">COMPUTADORAS IMAC PAB.L</option>
+                    <option value="3">CUBICULOS PAB.L</option>
+                    <option value="4">DISEÑO - MAC</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column is-narrow-mobile">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 140px;">Fecha de reserva</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="control has-icons-right">
+                  <input type="text" id="date" class="input" placeholder="----/--/--">
+                  <span class="icon is-right">
+                    <i class="far fa-calendar-alt"></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="columns is-mobile">
-      <div class="column">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 165px;">Local</label>
+  
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 165px;">Numero de horas</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="select" style="width: 100%;">
+                  <select name="" id="" style="width: 100%;">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <div class="select" style="width: 100%;">
-                <select name="" id="" style="width: 100%;">
-                  <option value="">Todos</option>
-                </select>
+        </div>
+  
+        <div class="column">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label" style="width: 140px;">Hora de reserva</label>
+            </div>
+            
+            <div class="field-body">
+              <div class="field">
+                <div class="control has-icons-right">
+                  <input type="time" id="time" class="input" name="" readonly>
+                  <span class="icon is-right">
+                    <i class="far fa-clock"></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="column is-hidden-mobile"></div>
-    </div>
-
-    <div class="columns is-mobile">
-      <div class="column">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 165px;">Tipo de recurso</label>
-          </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <div class="select" style="width: 100%;">
-                <select name="" id="" style="width: 100%;">
-                  <option value="0">COMPUTADORAS-UPC</option>
-                  <option value="1">CUBICULOS UPC</option>
-                  <option value="2">COMPUTADORAS IMAC PAB.L</option>
-                  <option value="3">CUBICULOS PAB.L</option>
-                  <option value="4">DISEÑO - MAC</option>
-                </select>
-              </div>
-            </div>
-          </div>
+      
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control">
+          <a href="resultados.html" class="button is-link">Buscar</a>
+        </div>
+        <div class="control">
+          <button class="button is-link is-light">Cancel</button>
         </div>
       </div>
-
-      <div class="column is-narrow-mobile">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 140px;">Fecha de reserva</label>
-          </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <input type="date" id="date" class="input" name="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-mobile">
-      <div class="column">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 165px;">Numero de horas</label>
-          </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <div class="select" style="width: 100%;">
-                <select name="" id="" style="width: 100%;">
-                  <option value="">1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                  <option value="">5</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="field is-horizontal">
-          <div class="field-label is-normal">
-            <label class="label" style="width: 140px;">Hora de reserva</label>
-          </div>
-          
-          <div class="field-body">
-            <div class="field">
-              <input type="time" id="time" class="input" name="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="field is-grouped is-grouped-centered">
-      <div class="control">
-        <a href="resultados.html" class="button is-link">Buscar</a>
-      </div>
-      <div class="control">
-        <button class="button is-link is-light">Cancel</button>
-      </div>
-    </div>
+    </form>
   </main>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery.datetimepicker.full.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script> -->
+  <script src="js/flatpickr.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
