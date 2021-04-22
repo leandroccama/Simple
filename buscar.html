@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/bulma.css">
   <link rel="stylesheet" href="css/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
   <title>Buscar</title>
 </head>
 <body>
@@ -41,8 +42,9 @@
             <div class="field-body">
               <div class="field">
                 <div class="select is-fullwidth">
-                  <select name="">
-                    <option value="">AC-PREGRADO-UPC</option>
+                  <select name="modalidad_estudio">
+                    <option value="0">*</option>
+                    <option value="AC-PREGRADO-UPC">AC-PREGRADO-UPC</option>
                   </select>
                 </div>
               </div>
@@ -59,9 +61,9 @@
             <div class="field-body">
               <div class="field">
                 <div class="select">
-                  <select style="width: 130px;">
-                    <option value="">202001</option>
-                    <option value="">202002</option>
+                  <select name="ciclo_academico" style="width: 130px;">
+                    <option value="202001">202001</option>
+                    <option value="202002">202002</option>
                   </select>
                 </div>
               </div>
@@ -71,7 +73,7 @@
       </div>
   
       <div class="columns is-mobile">
-        <div class="column">
+        <div class="column is-full-mobile is-6-desktop">
           <div class="field is-horizontal">
             <div class="field-label is-normal">
               <label class="label" style="width: 165px;">Local</label>
@@ -80,16 +82,14 @@
             <div class="field-body">
               <div class="field">
                 <div class="select is-fullwidth">
-                  <select name="">
-                    <option value="">Todos</option>
+                  <select name="local">
+                    <option value="Todos">Todos</option>
                   </select>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
-        <div class="column is-hidden-mobile"></div>
       </div>
   
       <div class="columns is-mobile">
@@ -101,13 +101,14 @@
             
             <div class="field-body">
               <div class="field">
-                <div class="select" style="width: 100%;">
-                  <select name="" id="" style="width: 100%;">
-                    <option value="0">COMPUTADORAS-UPC</option>
-                    <option value="1">CUBICULOS UPC</option>
-                    <option value="2">COMPUTADORAS IMAC PAB.L</option>
-                    <option value="3">CUBICULOS PAB.L</option>
-                    <option value="4">DISEÑO - MAC</option>
+                <div class="select is-fullwidth">
+                  <select name="tipo_recurso">
+                    <option value="0">*</option>
+                    <option value="COMPUTADORAS-UPC">COMPUTADORAS-UPC</option>
+                    <option value="CUBICULOS UPC">CUBICULOS UPC</option>
+                    <option value="COMPUTADORAS IMAC PAB.L">COMPUTADORAS IMAC PAB.L</option>
+                    <option value="CUBICULOS PAB.L">CUBICULOS PAB.L</option>
+                    <option value="DISEÑO - MAC">DISEÑO - MAC</option>
                   </select>
                 </div>
               </div>
@@ -124,7 +125,7 @@
             <div class="field-body">
               <div class="field">
                 <div class="control has-icons-right">
-                  <input type="text" id="date" class="input" placeholder="----/--/--">
+                  <input type="text" name="fecha_reserva" id="date" class="input" placeholder="----/--/--">
                   <span class="icon is-right">
                     <i class="far fa-calendar-alt"></i>
                   </span>
@@ -144,13 +145,14 @@
             
             <div class="field-body">
               <div class="field">
-                <div class="select" style="width: 100%;">
-                  <select name="" id="" style="width: 100%;">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                    <option value="">5</option>
+                <div class="select is-fullwidth">
+                  <select name="horas">
+                    <option value="0">*</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </select>
                 </div>
               </div>
@@ -167,7 +169,7 @@
             <div class="field-body">
               <div class="field">
                 <div class="control has-icons-right">
-                  <input type="time" id="time" class="input" name="" readonly>
+                  <input type="time" name="hora_reserva" id="time" class="input" placeholder="--:--" readonly>
                   <span class="icon is-right">
                     <i class="far fa-clock"></i>
                   </span>
@@ -180,16 +182,17 @@
       
       <div class="field is-grouped is-grouped-centered">
         <div class="control">
-          <a href="resultados.html" class="button is-link">Buscar</a>
+          <button type="submit" class="button is-link">Buscar</button>
         </div>
         <div class="control">
-          <button class="button is-link is-light">Cancel</button>
+          <button type="button" class="button is-link is-light">Cancel</button>
         </div>
       </div>
     </form>
   </main>
 
   <script src="js/flatpickr.min.js"></script>
+  <script src="js/sweetalert2.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
