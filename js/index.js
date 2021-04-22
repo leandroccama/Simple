@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formElements = getElementsForm(form.elements);
+    
 
     new Promise( (resolve, reject) => {
       for (const element of formElements) {
@@ -34,14 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
         }
       }
-
       resolve();
-    }).then( () => {
-      for (const element of formElements) {
-        window.localStorage.setItem(element.name, element.value)
-      }
-      location.href = "/resultados.html";
     })
+    .then( () => {
+      let CubiloBusqueda = [];
+      for (const element of formElements) {
+        CubiloBusqueda.push({
+          name: element.name,
+          value: element.value
+        })
+      }
+      return CubiloBusqueda;
+    })
+    .then( data => localStorage.setItem('cubiculoBusqueda', JSON.stringify(data)))
+    .then( () => location.href = "/resultados.html")
     .catch( () => false);
   });
 })
