@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return CubiloBusqueda;
     })
     .then( data => localStorage.setItem('cubiculoBusqueda', JSON.stringify(data)))
-    .then( () => location.href = "/resultados.html")
+    .then( () => location.href = "resultados.html")
     .catch( () => false);
   });
 })

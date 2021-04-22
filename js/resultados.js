@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (input) input.value = data_item.value;
   } 
 
+  // const fecha = FilterName(data, 'fecha_reserva');
+  // const hora = FilterName(data, 'hora_reserva');
+  // const date = fecha.split('-');
+  // const time = hora.split(':');
+  // const asd = new Date(date[0], date[1], date[2], time[0], time[1]);
+  // console.log(asd.toLocaleTimeString().);
+
   for (let i = 0; i < 3; i++) {
     container.innerHTML += `
       <div class="column is-full-tablet-only is-half-desktop">
