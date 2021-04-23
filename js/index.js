@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 })
 
-function getElementsForm(elements) {
+const getElementsForm = (elements) => {
   let formElementsValid = [];
   for (const element of elements) {
     element.hasAttribute('name') ? formElementsValid.push(element) : false;

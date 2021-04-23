@@ -16,71 +16,81 @@
     <div class="column is-narrow" style="width: 400px;">
       <div class="p-4">
         <div class="block">
-          <span class="subtitle is-6 is-block">Mis reservas</span>
+          <a href="reservas.html" class="">Mis reservas</a>
           <p class="title is-2">CUBÍCULOS</p>
           <p class="subtitle is-5">Recursos disponibles</p>
         </div>
 
         <div class="box block is-radiusless">
-          <div class="field">
-            <label class="label is-small">Sede</label>
-            <div class="control">
-              <div class="select is-fullwidth is-dark">
-                <select>
-                  <option value="0">CAMPUS MONTERRICO</option>
-                </select>
+          <form name="VerDisponibilidad">
+            <div class="field">
+              <label class="label is-small">Sede</label>
+              <div class="control">
+                <div class="select is-fullwidth is-dark">
+                  <select name="local">
+                    <option value="0">SELECCIONAR SEDE</option>
+                    <option value="MONTERRICO">MONTERRICO</option>
+                    <option value="CAMPUS VILLA">CAMPUS VILLA</option>
+                    <option value="SALAVERRY">SALAVERRY</option>
+                    <option value="SAN ISIDRO">SAN ISIDRO</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
-  
-          <div class="field">
-            <label class="label is-small">Pabellón</label>
-            <div class="control">
-              <div class="select is-fullwidth is-dark">
-                <select>
-                  <option value="0">SELECCIONE PABELLON</option>
-                </select>
+    
+            <div class="field">
+              <label class="label is-small">Pabellón</label>
+              <div class="control">
+                <div class="select is-fullwidth is-dark">
+                  <select name="pabellon">
+                    <option value="0">SELECCIONE PABELLON</option>
+                    <option value="N">N</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
-  
-          <div class="field">
-            <label class="label is-small">Dia de reserva</label>
-            <div class="control has-icons-right">
-              <input type="text" class="input is-dark" name="fecha_reserva" readonly disabled>
-              <span class="icon is-right has-text-dark">
-                <i class="far fa-calendar-alt"></i>
-              </span>
-            </div>
-          </div>
-  
-          <div class="field">
-            <label class="label is-small">Hora de reserva</label>
-            <div class="control has-icons-right">
-              <input type="text" id="time" class="input is-dark" name="hora_reserva">
-              <span class="icon is-right has-text-dark">
-                <i class="far fa-clock"></i>
-              </span>
-            </div>
-          </div>
-  
-          <div class="field">
-            <label class="label is-small">Cantidad de horas</label>
-            <div class="control">
-              <div class="select is-fullwidth is-dark">
-                <select name="horas">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
+    
+            <div class="field">
+              <label class="label is-small">Dia de reserva</label>
+              <div class="control has-icons-right">
+                <input type="text" class="input is-dark" name="fecha_reserva" readonly disabled>
+                <span class="icon is-right has-text-dark">
+                  <i class="far fa-calendar-alt"></i>
+                </span>
               </div>
             </div>
-          </div>
-  
-          <div class="field">
-            <button class="button is-black is-fullwidth">VER DISPONIBILIDAD</button>
-          </div>
+    
+            <div class="field">
+              <label class="label is-small">Hora de reserva</label>
+              <div class="control has-icons-right">
+                <input type="text" id="time" class="input is-dark" name="hora_reserva">
+                <span class="icon is-right has-text-dark">
+                  <i class="far fa-clock"></i>
+                </span>
+              </div>
+            </div>
+    
+            <div class="field">
+              <label class="label is-small">Cantidad de horas</label>
+              <div class="control">
+                <div class="select is-fullwidth is-dark">
+                  <select name="horas">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+    
+            <div class="field">
+              <button class="button is-black is-fullwidth">VER DISPONIBILIDAD</button>
+            </div>
+          </form>
         </div>
 
         <div class="block">
@@ -156,6 +166,7 @@
 
   <script src="js/flatpickr.min.js"></script>
   <script src="js/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
   <script src="js/resultados.js"></script>
 </body>
 </html>
